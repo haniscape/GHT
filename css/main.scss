@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	background-image: url(../images/bg-ght-outlined.png);
+	background-size: 100vw;
+	background-repeat: no-repeat;
+	background-position: 25vw -5vw;
+	background-attachment: fixed;
+	overflow-x: hidden;
+	min-height: calc(375vw + 200px);
+
+	header {
+		max-width: 1680px;
+		height: 100vh;
+		margin: 0 auto;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		pointer-events: none;
+		z-index: 1;
+		user-select: none;
+
+		.menu {
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			user-select: none;
+			pointer-events: auto;
+
+			ul {
+
+				li {
+					list-style: none;
+
+					a {
+						font-size: 1.4rem;
+						line-height: 2.5rem;
+						font-weight: 400;
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.logo {
+				margin-top: 80%;
+
+				img {
+					width: 4rem;
+				}
+			}
+		}
+
+		.hamburger {
+			img {
+				pointer-events: auto;
+				width: 2rem;
+				margin: 2rem;
+			}
+		}
+	}
+
+	main {
+		transform: translateY(-70vh);
+		width: 100%;
+
+		#ght {
+			width: 100%;
+			height: 100vh;
+			padding-left: 18vw;
+
+			.hero-title {
+				max-width: 1300px;
+				max-height: 375px;
+
+				h1 {
+					font-size: 7.5vw;
+					line-height: 8vw;
+					letter-spacing: 0.4rem;
+				}
+			}
+
+			.hero-text {
+				max-width: 42vw;
+				padding: 5vw 0 2vw 7vw;
+				border-left: 3px solid #fff;
+				margin-left: 20vw;
+
+				p {
+					font-size: 1.3vw;
+					font-weight: 300;
+					line-height: 1.85vw;
+				}
+			}
+		}
+
+		#wohnen,
+		#arbeiten,
+		#offentlich {
+			position: relative;
+			transform: translateY(-20vh);
+
+			.slider {
+				display: block;
+				width: 100%;
+				height: 50vw;
+				margin: 100px 0;
+
+				.title {
+					font-size: 5vw;
+					position: absolute;
+					left: 30vw;
+					transform: translateY(-4vw);
+				}
+
+				img {
+					position: absolute;
+					height: 46.5vw;
+					width: 100%;
+					top: 0;
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+					z-index: -1;
+					opacity: 0;
+					transition: opacity 1s;
+
+					&.active {
+						opacity: 1;
+					}
+				}
+
+				.info {
+					height: 3vw;
+					width: 30vw;
+					background-color: #fff;
+					position: absolute;
+					color: #000;
+					right: 0;
+					transform: translateY(45vw);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					span {
+						margin: 0 2vw;
+						font-size: 0.75vw;
+					}
+				}
+
+				.slider-controls {
+					width: 30vw;
+					margin: 0 auto;
+
+					.indicators {
+						height: 1vw;
+						width: 30vw;
+						position: absolute;
+						color: #000;
+						right: 0;
+						transform: translateY(48vw);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						ul {
+							list-style: none;
+
+							li {
+								display: inline-block;
+								background-color: #707070;
+								height: 7px;
+								width: 7px;
+								border-radius: 50%;
+								margin: 0 2px;
+								cursor: pointer;
+
+								&.active {
+									background-color: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#leistungen {
+			width: 100%;
+			transform: translateY(-20vh);
+
+			.container {
+				height: 40vw;
+				width: 80%;
+				position: relative;
+				float: right;
+			}
+
+			h1 {
+				position: absolute;
+				left: 0;
+				top: 20%;
+				font-size: 5vw;
+			}
+
+			p {
+				position: absolute;
+				left: 6%;
+				top: 40%;
+				width: 42vw;
+				font-size: 1.3vw;
+				font-weight: 300;
+				line-height: 2.3vw;
+			}
+
+			.arrow {
+				position: absolute;
+				top: 60%;
+				left: 6%;
+				display: grid;
+
+				h5 {
+					font-size: 1.5vw;
+					font-weight: 400;
+				}
+
+				img {
+					width: 8vw;
+					margin-top: 3px;
+					right: 0;
+				}
+
+			}
+
+			img {
+				height: 100%;
+				float: right;
+				width: 80%;
+			}
+		}
+
+		#standorte {
+			width: 100%;
+			transform: translateY(-10vh);
+
+			.container {
+				height: 45vw;
+				width: 100%;
+				position: relative;
+				float: right;
+
+
+				h1 {
+					position: absolute;
+					left: 30vw;
+					top: -4.5vw;
+					font-size: 5vw;
+				}
+
+				p {
+					position: absolute;
+					left: 35vw;
+					top: 3.5vw;
+					width: 42vw;
+					font-size: 1.3vw;
+					font-weight: 300;
+					line-height: 2.3vw;
+				}
+
+				img {
+					height: 100%;
+					width: 100%;
+					float: right;
+				}
+			}
+		}
+
+		#footer {
+			transform: translateY(20vh);
+
+			.container {
+				height: 40vw;
+				width: 80%;
+				float: right;
+				background-color: #fff;
+				position: relative;
+
+				.planung {
+					width: 15vw;
+					height: 15vw;
+					color: #fff;
+					background-color: #000;
+					border: 1vw solid #fff;
+					border-radius: 50%;
+					-webkit-transform: rotate(12deg);
+					transform: rotate(12deg);
+					display: -ms-grid;
+					display: grid;
+					place-items: center;
+					padding: 1.5vw;
+					position: absolute;
+					top: -7vw;
+					right: 7vw;
+
+					span {
+						font-size: 1.8vw;
+						font-weight: 700;
+						text-align: center;
+					}
+
+				}
+
+				.phases {
+					ul {
+						list-style: none;
+						font-size: 1.4rem;
+						line-height: 2.5rem;
+						font-weight: 400;
+						color: #000;
+						text-decoration: none;
+						display: flex;
+						width: 65%;
+						margin: 8vw 8vw 6vw 8vw;
+
+						li {
+							margin: 1vw;
+							display: -webkit-box;
+							display: -ms-flexbox;
+							display: flex;
+							flex-direction: column;
+							width: 20%;
+							font-size: 2.1vw;
+							z-index: 2;
+							font-weight: 300;
+						}
+
+						span {
+							font-size: 8vw;
+							font-weight: 700;
+							color: #fff;
+							-webkit-text-stroke-width: .03vw;
+							-webkit-text-stroke-color: #000;
+							-webkit-transform: translatex(-9vw);
+							transform: translate(-11vw, -1vw);
+							z-index: 1;
+						}
+					}
+				}
+
+				.anfragen {
+					text-align: right;
+
+					em {
+						color: #000;
+						font-size: 10vw;
+						text-align: right;
+						text-decoration: underline;
+						font-style: normal;
+						font-weight: 600;
+						margin-right: 3vw;
+						letter-spacing: .2vw;
+					}
+				}
+			}
+		}
+	}
+}

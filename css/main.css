@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  background-image: url(../images/bg-ght-outlined.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: 25vw -5vw;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  min-height: calc(375vw + 200px);
+}
+
+body header {
+  max-width: 1680px;
+  height: 100vh;
+  margin: 0 auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body header .menu {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: auto;
+}
+
+body header .menu ul li {
+  list-style: none;
+}
+
+body header .menu ul li a {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+body header .menu .logo {
+  margin-top: 80%;
+}
+
+body header .menu .logo img {
+  width: 4rem;
+}
+
+body header .hamburger img {
+  pointer-events: auto;
+  width: 2rem;
+  margin: 2rem;
+}
+
+body main {
+  -webkit-transform: translateY(-70vh);
+          transform: translateY(-70vh);
+  width: 100%;
+}
+
+body main #ght {
+  width: 100%;
+  height: 100vh;
+  padding-left: 18vw;
+}
+
+body main #ght .hero-title {
+  max-width: 1300px;
+  max-height: 375px;
+}
+
+body main #ght .hero-title h1 {
+  font-size: 7.5vw;
+  line-height: 8vw;
+  letter-spacing: 0.4rem;
+}
+
+body main #ght .hero-text {
+  max-width: 42vw;
+  padding: 5vw 0 2vw 7vw;
+  border-left: 3px solid #fff;
+  margin-left: 20vw;
+}
+
+body main #ght .hero-text p {
+  font-size: 1.3vw;
+  font-weight: 300;
+  line-height: 1.85vw;
+}
+
+body main #wohnen,
+body main #arbeiten,
+body main #offentlich {
+  position: relative;
+  -webkit-transform: translateY(-20vh);
+          transform: translateY(-20vh);
+}
+
+body main #wohnen .slider,
+body main #arbeiten .slider,
+body main #offentlich .slider {
+  display: block;
+  width: 100%;
+  height: 50vw;
+  margin: 100px 0;
+}
+
+body main #wohnen .slider .title,
+body main #arbeiten .slider .title,
+body main #offentlich .slider .title {
+  font-size: 5vw;
+  position: absolute;
+  left: 30vw;
+  -webkit-transform: translateY(-4vw);
+          transform: translateY(-4vw);
+}
+
+body main #wohnen .slider img,
+body main #arbeiten .slider img,
+body main #offentlich .slider img {
+  position: absolute;
+  height: 46.5vw;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+body main #wohnen .slider img.active,
+body main #arbeiten .slider img.active,
+body main #offentlich .slider img.active {
+  opacity: 1;
+}
+
+body main #wohnen .slider .info,
+body main #arbeiten .slider .info,
+body main #offentlich .slider .info {
+  height: 3vw;
+  width: 30vw;
+  background-color: #fff;
+  position: absolute;
+  color: #000;
+  right: 0;
+  -webkit-transform: translateY(45vw);
+          transform: translateY(45vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #wohnen .slider .info span,
+body main #arbeiten .slider .info span,
+body main #offentlich .slider .info span {
+  margin: 0 2vw;
+  font-size: 0.75vw;
+}
+
+body main #wohnen .slider .slider-controls,
+body main #arbeiten .slider .slider-controls,
+body main #offentlich .slider .slider-controls {
+  width: 30vw;
+  margin: 0 auto;
+}
+
+body main #wohnen .slider .slider-controls .indicators,
+body main #arbeiten .slider .slider-controls .indicators,
+body main #offentlich .slider .slider-controls .indicators {
+  height: 1vw;
+  width: 30vw;
+  position: absolute;
+  color: #000;
+  right: 0;
+  -webkit-transform: translateY(48vw);
+          transform: translateY(48vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #wohnen .slider .slider-controls .indicators ul,
+body main #arbeiten .slider .slider-controls .indicators ul,
+body main #offentlich .slider .slider-controls .indicators ul {
+  list-style: none;
+}
+
+body main #wohnen .slider .slider-controls .indicators ul li,
+body main #arbeiten .slider .slider-controls .indicators ul li,
+body main #offentlich .slider .slider-controls .indicators ul li {
+  display: inline-block;
+  background-color: #707070;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+body main #wohnen .slider .slider-controls .indicators ul li.active,
+body main #arbeiten .slider .slider-controls .indicators ul li.active,
+body main #offentlich .slider .slider-controls .indicators ul li.active {
+  background-color: #fff;
+}
+
+body main #leistungen {
+  width: 100%;
+  -webkit-transform: translateY(-20vh);
+          transform: translateY(-20vh);
+}
+
+body main #leistungen .container {
+  height: 40vw;
+  width: 80%;
+  position: relative;
+  float: right;
+}
+
+body main #leistungen h1 {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  font-size: 5vw;
+}
+
+body main #leistungen p {
+  position: absolute;
+  left: 6%;
+  top: 40%;
+  width: 42vw;
+  font-size: 1.3vw;
+  font-weight: 300;
+  line-height: 2.3vw;
+}
+
+body main #leistungen .arrow {
+  position: absolute;
+  top: 60%;
+  left: 6%;
+  display: -ms-grid;
+  display: grid;
+}
+
+body main #leistungen .arrow h5 {
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+body main #leistungen .arrow img {
+  width: 8vw;
+  margin-top: 3px;
+  right: 0;
+}
+
+body main #leistungen img {
+  height: 100%;
+  float: right;
+  width: 80%;
+}
+
+body main #standorte {
+  width: 100%;
+  -webkit-transform: translateY(-10vh);
+          transform: translateY(-10vh);
+}
+
+body main #standorte .container {
+  height: 45vw;
+  width: 100%;
+  position: relative;
+  float: right;
+}
+
+body main #standorte .container h1 {
+  position: absolute;
+  left: 30vw;
+  top: -4.5vw;
+  font-size: 5vw;
+}
+
+body main #standorte .container p {
+  position: absolute;
+  left: 35vw;
+  top: 3.5vw;
+  width: 42vw;
+  font-size: 1.3vw;
+  font-weight: 300;
+  line-height: 2.3vw;
+}
+
+body main #standorte .container img {
+  height: 100%;
+  width: 100%;
+  float: right;
+}
+
+body main #footer {
+  -webkit-transform: translateY(20vh);
+          transform: translateY(20vh);
+}
+
+body main #footer .container {
+  height: 40vw;
+  width: 80%;
+  float: right;
+  background-color: #fff;
+  position: relative;
+}
+
+body main #footer .container .planung {
+  width: 15vw;
+  height: 15vw;
+  color: #fff;
+  background-color: #000;
+  border: 1vw solid #fff;
+  border-radius: 50%;
+  -webkit-transform: rotate(12deg);
+  transform: rotate(12deg);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 1.5vw;
+  position: absolute;
+  top: -7vw;
+  right: 7vw;
+}
+
+body main #footer .container .planung span {
+  font-size: 1.8vw;
+  font-weight: 700;
+  text-align: center;
+}
+
+body main #footer .container .phases ul {
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  margin: 8vw 8vw 6vw 8vw;
+}
+
+body main #footer .container .phases ul li {
+  margin: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  font-size: 2.1vw;
+  z-index: 2;
+  font-weight: 300;
+}
+
+body main #footer .container .phases ul span {
+  font-size: 8vw;
+  font-weight: 700;
+  color: #fff;
+  -webkit-text-stroke-width: .03vw;
+  -webkit-text-stroke-color: #000;
+  -webkit-transform: translatex(-9vw);
+  transform: translate(-11vw, -1vw);
+  z-index: 1;
+}
+
+body main #footer .container .anfragen {
+  text-align: right;
+}
+
+body main #footer .container .anfragen em {
+  color: #000;
+  font-size: 10vw;
+  text-align: right;
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: 600;
+  margin-right: 3vw;
+  letter-spacing: .2vw;
+}
+/*# sourceMappingURL=main.css.map */
